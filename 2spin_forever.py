@@ -3,20 +3,23 @@
 import time
 import maestro as m
 s= m.Controller()
-izq = 4
-der = 5
 
-while 1:
-	s.setTarget(izq,1)
-	s.setTarget(der,-1)
+IZQ=4
+DER=5
 
-	time.sleep(3)
+while (1):
+	s.setTarget(IZQ,-1)
+        s.setTarget(DER,1)
+        time.sleep(2)
 
-	s.setTarget(izq,0)
-	s.setTarget(der,0)
-	
-	time.sleep(1)
+        s.setTarget(IZQ,0)
+        s.setTarget(DER,0)
+        time.sleep(0.35)
 
+        s.setTarget(IZQ,1)
+        s.setTarget(DER,-1)
+        time.sleep(2)
 
-	s.setTarget(izq,-1)
-	s.setTarget(der,1)
+        s.setTarget(IZQ,0)
+        s.setTarget(DER,0)
+        time.sleep(0.35)
